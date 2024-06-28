@@ -358,166 +358,159 @@ def sec3(datadic, age):
     plt.show()
 
 
-# def sec4(datadic, age):
-#     data17 = np.array(datadic[age])
-#     # for i in data17:
-#     #     print('-----------------------------------------')
-#     #     for j in range(3,len(qs)):
-#     #         print(qs[j])
-#     #         print(i[j])
-#     chkpoints = { 4: []}
-#     for i in data17:
-#         curr = {4: []}
-#         for j in range(4, len(qs)):
-#             if (j >= 21 and j <= 29):
-#                 curr[4].append(i[j])
-#         for k in curr:
-#             chkpoints[k].append(curr[k])
-#
-#     print(chkpoints)
-#
-#     x1 = [0, 0,0,0,0]
-#     x2 = [0, 0]
-#     x3 = [0, 0, 0, 0,0]
-#     x4 = [0, 0]
-#     x5 = [0, 0,0,0,0]
-#     x6 = [0,0]
-#     x7 = [0,0,0,0,0]
-#     x8 =[0,0,0,0,0]
-#     x9=[0,0,0,0]
-#     for i in chkpoints[4]:
-#         for j in range(len(i)):
-#             # first qs
-#             if (j == 0):
-#                 if i[j] == 1.0:
-#                     x1[0] += 1
-#                 elif i[j] == 2.0:
-#                     x1[1] += 1
-#                 elif i[j] == 3.0:
-#                     x1[2] += 1
-#                 elif i[j] == 4.0:
-#                     x1[3] += 1
-#                 else:
-#                     x1[4]+=1
-#             # second qs
-#             elif (j == 1):
-#                 if i[j] == "YES":
-#                     x2[0] += 1
-#                 else:
-#                     x2[1] += 1
-#             # third qs
-#             elif (j == 2):
-#                 if i[j] == 1.0:
-#                     x3[0] += 1
-#                 elif i[j] == 2.0:
-#                     x3[1] += 1
-#                 elif i[j] == 3.0:
-#                     x3[2] += 1
-#                 elif i[j] == 4.0:
-#                     x3[3] += 1
-#                 else:
-#                     x3[4] += 1
-#
-#             # fourth qs
-#             elif (j == 3):
-#                 if i[j] == "YES":
-#                     x4[0] += 1
-#                 else:
-#                     x4[1] += 1
-#             # fifth qs
-#             elif (j == 4):
-#                 if (j == 0):
-#                     if i[j] == 1.0:
-#                         x5[0] += 1
-#                     elif i[j] == 2.0:
-#                         x5[1] += 1
-#                     elif i[j] == 3.0:
-#                         x5[2] += 1
-#                     elif i[j] == 4.0:
-#                         x5[3] += 1
-#                     else:
-#                         x5[4] += 1
-#             #SIXTH QS
-#             elif (j==5):
-#                 if i[j] == "YES":
-#                     x6[0] += 1
-#                 else:
-#                     x6[1] += 1
-#             #seventh qs
-#             elif(j==6):
-#                 if (j == 0):
-#                     if i[j] == 1.0:
-#                         x7[0] += 1
-#                     elif i[j] == 2.0:
-#                         x7[1] += 1
-#                     elif i[j] == 3.0:
-#                         x7[2] += 1
-#                     elif i[j] == 4.0:
-#                         x7[3] += 1
-#                     else:
-#                         x7[4] += 1
-#             #EIGHTH QS
-#             elif (j == 7):
-#                 if i[j] == 1.0:
-#                     x8[0] += 1
-#                 elif i[j] == 2.0:
-#                     x8[1] += 1
-#                 elif i[j] == 3.0:
-#                     x8[2] += 1
-#                 elif i[j] == 4.0:
-#                     x8[3] += 1
-#                 else:
-#                     x8[4] += 1
-#             #nineth qs
-#             else:
-#                 if i[j] == "NOT AT ALL":
-#                     x9[0] += 1
-#                 elif i[j] == "SEVERAL DAYS":
-#                     x9[1] += 1
-#                 elif i[j] == "MORE THAN HALF THE DAYS":
-#                     x9[2] += 1
-#                 else:
-#                     x9[3] += 1
-#
-#
-#     plt.subplot(4, 5, 1)
-#     plt.pie(x1, radius=1, autopct="%0.1f%%")
-#     plt.title(qs[21],fontsize=7)
-#     plt.legend([1,2,3,4,5], loc='upper left', fontsize=8)
-#     plt.subplot(4, 5, 2)
-#     plt.pie(x2, radius=1, autopct="%0.1f%%")
-#     plt.title(qs[22],fontsize=7)
-#     plt.legend(["YES","NO"], loc='upper left', fontsize=7)
-#     plt.subplot(4, 5, 3)
-#     plt.pie(x3, radius=1, autopct="%0.1f%%")
-#     plt.title(qs[23],fontsize=7)
-#     plt.legend([1,2,3,4,5], loc='upper left', fontsize=7)
-#     plt.subplot(4, 5, 4)
-#     plt.pie(x4, radius=1, autopct="%0.1f%%")
-#     plt.title(qs[24],fontsize=5)
-#     plt.legend(["YES","NO"], loc='upper left', fontsize=7)
-#     plt.subplot(4,5, 5)
-#     plt.pie(x5, radius=1,autopct="%0.1f%%")
-#     plt.title(qs[25],fontsize=5)
-#     plt.legend([1,2,3,4,5],loc='upper left', fontsize=7)
-#     plt.subplot(4, 5, 6)
-#     plt.pie(x6, radius=1, autopct="%0.1f%%")
-#     plt.title(qs[26], fontsize=5)
-#     plt.legend(["YES", "NO"],loc='upper left', fontsize=7)
-#     plt.subplot(4,5,7)
-#     plt.pie(x7, radius=1, autopct="%0.1f%%")
-#     plt.title(qs[27],fontsize=5)
-#     plt.legend([1,2,3,4,5],loc='upper left', fontsize=7)
-#     plt.subplot(4,5,8)
-#     plt.pie(x8, radius=1, autopct="%0.1f%%")
-#     plt.title(qs[28], fontsize=5)
-#     plt.legend([1,2,3,4,5],loc='upper left', fontsize=7)
-#     plt.subplot(4, 5, 9)
-#     plt.pie(x9, radius=1, autopct="%0.1f%%")
-#     plt.title(qs[29], fontsize=5)
-#     plt.legend(["NOT AT ALL","SEVERAL DAYS","MORE THAN HALF THE DAYS","ALWAYS"],loc='upper left', fontsize=7)
-#
-#     plt.show()
+def sec4(datadic, age):
+    data17 = np.array(datadic[age])
+    chkpoints = {4: []}
+    for i in data17:
+        curr = {4: []}
+        for j in range(21, 30):
+            curr[4].append(i[j])
+        for k in curr:
+            chkpoints[k].append(curr[k])
+
+    print("Checkpoints:", chkpoints)
+
+    x1 = [0, 0, 0, 0, 0]
+    x2 = [0, 0]
+    x3 = [0, 0, 0, 0, 0]
+    x4 = [0, 0]
+    x5 = [0, 0, 0, 0, 0]
+    x6 = [0, 0]
+    x7 = [0, 0, 0, 0, 0]
+    x8 = [0, 0, 0, 0, 0]
+    x9 = [0, 0, 0, 0]
+
+    for i in chkpoints[4]:
+        for j in range(len(i)):
+            if j == 0:
+                if i[j] == 1.0:
+                    x1[0] += 1
+                elif i[j] == 2.0:
+                    x1[1] += 1
+                elif i[j] == 3.0:
+                    x1[2] += 1
+                elif i[j] == 4.0:
+                    x1[3] += 1
+                elif i[j] == 5.0:
+                    x1[4] += 1
+            elif j == 1:
+                if i[j] == "YES":
+                    x2[0] += 1
+                else:
+                    x2[1] += 1
+            elif j == 2:
+                if i[j] == 1.0:
+                    x3[0] += 1
+                elif i[j] == 2.0:
+                    x3[1] += 1
+                elif i[j] == 3.0:
+                    x3[2] += 1
+                elif i[j] == 4.0:
+                    x3[3] += 1
+                elif i[j] == 5.0:
+                    x3[4] += 1
+            elif j == 3:
+                if i[j] == "YES":
+                    x4[0] += 1
+                else:
+                    x4[1] += 1
+            elif j == 4:
+                if i[j] == 1.0:
+                    x5[0] += 1
+                elif i[j] == 2.0:
+                    x5[1] += 1
+                elif i[j] == 3.0:
+                    x5[2] += 1
+                elif i[j] == 4.0:
+                    x5[3] += 1
+                elif i[j] == 5.0:
+                    x5[4] += 1
+            elif j == 5:
+                if i[j] == "YES":
+                    x6[0] += 1
+                else:
+                    x6[1] += 1
+            elif j == 6:
+                if i[j] == 1.0:
+                    x7[0] += 1
+                elif i[j] == 2.0:
+                    x7[1] += 1
+                elif i[j] == 3.0:
+                    x7[2] += 1
+                elif i[j] == 4.0:
+                    x7[3] += 1
+                elif i[j] == 5.0:
+                    x7[4] += 1
+            elif j == 7:
+                if i[j] == 1.0:
+                    x8[0] += 1
+                elif i[j] == 2.0:
+                    x8[1] += 1
+                elif i[j] == 3.0:
+                    x8[2] += 1
+                elif i[j] == 4.0:
+                    x8[3] += 1
+                elif i[j] == 5.0:
+                    x8[4] += 1
+            else:
+                if i[j] == "NOT AT ALL":
+                    x9[0] += 1
+                elif i[j] == "SEVERAL DAYS":
+                    x9[1] += 1
+                elif i[j] == "MORE THAN HALF THE DAYS":
+                    x9[2] += 1
+                elif i[j] == "ALWAYS":
+                    x9[3] += 1
+
+    # Debugging output for the lists
+    print("x1:", x1)
+    print("x2:", x2)
+    print("x3:", x3)
+    print("x4:", x4)
+    print("x5:", x5)
+    print("x6:", x6)
+    print("x7:", x7)
+    print("x8:", x8)
+    print("x9:", x9)
+
+    plt.subplot(4, 5, 1)
+    plt.pie(x1, radius=1, autopct="%0.1f%%")
+    plt.title(qs[21], fontsize=7)
+    plt.legend([1, 2, 3, 4, 5], loc='upper left', fontsize=8)
+    plt.subplot(4, 5, 2)
+    plt.pie(x2, radius=1, autopct="%0.1f%%")
+    plt.title(qs[22], fontsize=7)
+    plt.legend(["YES", "NO"], loc='upper left', fontsize=7)
+    plt.subplot(4, 5, 3)
+    plt.pie(x3, radius=1, autopct="%0.1f%%")
+    plt.title(qs[23], fontsize=7)
+    plt.legend([1, 2, 3, 4, 5], loc='upper left', fontsize=7)
+    plt.subplot(4, 5, 4)
+    plt.pie(x4, radius=1, autopct="%0.1f%%")
+    plt.title(qs[24], fontsize=5)
+    plt.legend(["YES", "NO"], loc='upper left', fontsize=7)
+    plt.subplot(4, 5, 5)
+    plt.pie(x5, radius=1, autopct="%0.1f%%")
+    plt.title(qs[25], fontsize=5)
+    plt.legend([1, 2, 3, 4, 5], loc='upper left', fontsize=7)
+    plt.subplot(4, 5, 6)
+    plt.pie(x6, radius=1, autopct="%0.1f%%")
+    plt.title(qs[26], fontsize=5)
+    plt.legend(["YES", "NO"], loc='upper left', fontsize=7)
+    plt.subplot(4, 5, 7)
+    plt.pie(x7, radius=1, autopct="%0.1f%%")
+    plt.title(qs[27], fontsize=5)
+    plt.legend([1, 2, 3, 4, 5], loc='upper left', fontsize=7)
+    plt.subplot(4, 5, 8)
+    plt.pie(x8, radius=1, autopct="%0.1f%%")
+    plt.title(qs[28], fontsize=5)
+    plt.legend([1, 2, 3, 4, 5], loc='upper left', fontsize=7)
+    plt.subplot(4, 5, 9)
+    plt.pie(x9, radius=1, autopct="%0.1f%%")
+    plt.title(qs[29], fontsize=5)
+    plt.legend(["NOT AT ALL", "SEVERAL DAYS", "MORE THAN HALF THE DAYS", "ALWAYS"], loc='upper left', fontsize=7)
+
+    plt.show()
 #
 # #SECTION 5
 # def sec1(datadic, age):
