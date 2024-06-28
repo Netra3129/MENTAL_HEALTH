@@ -656,7 +656,7 @@ def sec6(datadic, age):
                 else:
                     x2[1] += 1
             # third qs
-            elif(j == 3):
+            elif(j == 2):
                 if i[j] == 1:
                     x3[0] += 1
                 elif i[j] == 2:
@@ -669,10 +669,11 @@ def sec6(datadic, age):
                     x3[4] += 1
 
             # fourth qs
-            if i[j] == "YES":
-                x4[0] += 1
             else:
-                x4[1] += 1
+                if i[j] == "YES":
+                    x4[0] += 1
+                else:
+                    x4[1] += 1
 
     plt.subplot(2, 2, 1)
     plt.pie(x1, radius=1, autopct="%0.1f%%")
