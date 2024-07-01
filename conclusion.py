@@ -46,7 +46,7 @@ def academic(res):
         if i==17:
             if res[i].upper() in ["MODERATE",'HEAVY']:
                 chklst[0][0]=1
-        elif 
+        elif
         elif res[i].upper() in["YES",'NO']:
             chklst[0][1]=1
         elif res[i].upper() in[1,2,3]:
@@ -109,9 +109,41 @@ def job(res):
     return False
 
 def social(res):
-    chklst=[[0,0,0,0,0,0,0,0],[0,0,0]]
+    chklst=[[0,0,0,0,0,0,0,0],[0]]
     for i in range(21,30):
-        if res[]
+        if i==21:
+            if res[i] in [1,2,3,4,5]:
+                chklst[0][0]=1
+        elif i==22:
+            if res[i].upper() in ['YES','NO']:
+                chklst[0][1]=1
+        elif i==23:
+            if res[i] in [1,2,3,4,5]:
+                chklst[0][2]=1
+        elif i==24:
+            if res[i].upper() == "YES":
+                chklst[0][3]=1
+        elif i==25:
+            if res[i] in[1,2,3,4,5]:
+                chklst[0][4]=1
+        elif i==26:
+            if res[i].upper() in ["YES",'NO']:
+                chklst[0][5]=1
+        elif i==27:
+            if res[i] in [3,4,5]:
+                chklst[0][7]=1
+        elif i==29:
+            if res[i] in ['NOT AT ALL','SEVERAL DAYS','MORE THAN HALF THE DAYS','ALWAYS']:
+                chklst[0][8]=1
+    if res[30] in [3,4,5]:
+        chklst[1][0]=1
+    for i in chklst:
+        for j in i:
+            if j == 0:
+                return False
+    else:
+        return True
+
 
 def forward(indiRes,age):
     print(indiRes)
